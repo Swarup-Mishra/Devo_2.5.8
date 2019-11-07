@@ -1,0 +1,91 @@
+Success (3):
+processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 "ASD PM"
+processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 "ASD Perform Mathematical Operation"
+application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 "Appian SDLC"
+
+Trace:
+2019-11-07 07:02:41.087 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Begin transport.
+2019-11-07 07:02:41.088 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Retrieving object data.
+2019-11-07 07:02:41.093 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 App associated objects: [processModelFolder=[_g-0000e367-8744-8000-0b9d-014d98014d98_236],processModel=[0002e380-940e-8000-0b9d-014d98014d98]]
+2019-11-07 07:02:41.097 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Invalid associated objects: []
+2019-11-07 07:02:41.097 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Adding valid associated objects to be exported: GlobalBindingMap[processModelFolder={_g-0000e367-8744-8000-0b9d-014d98014d98_236=65},processModel={0002e380-940e-8000-0b9d-014d98014d98=1009}]
+2019-11-07 07:02:41.097 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Setting uuids of object references.
+2019-11-07 07:02:41.097 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: Application.forum
+2019-11-07 07:02:41.098 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: Application.parent
+2019-11-07 07:02:41.101 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: com.appiancorp.suiteapi.content.ContentRoleMap@23b1dba6[
+  ContentRole[name=readers,inherit=false,allowForAll=false]
+  ContentRole[name=authors,inherit=false,allowForAll=false]
+  ContentRole[name=administrators,inherit=false,allowForAll=false]
+  ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+  ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+  ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+  securityVector=1:SEC_PUBLIC=true,SEC_CREATOR_ADMIN=false,SEC_INH_ADMIN=false,SEC_INH_EDITOR=false,SEC_INH_VIEWER=false,SEC_ALL_ADMIN=false,SEC_ALL_EDITOR=false,SEC_ALL_VIEWER=false
+]
+2019-11-07 07:02:41.101 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: ContentRole[name=readers,inherit=false,allowForAll=false]
+2019-11-07 07:02:41.101 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: ContentRole[name=authors,inherit=false,allowForAll=false]
+2019-11-07 07:02:41.101 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: ContentRole[name=administrators,inherit=false,allowForAll=false]
+2019-11-07 07:02:41.101 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: ContentRole[name=denyReaders,inherit=false,allowForAll=false]
+2019-11-07 07:02:41.101 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: ContentRole[name=denyAuthors,inherit=false,allowForAll=false]
+2019-11-07 07:02:41.101 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Processing reference: ContentRole[name=denyAdministrators,inherit=false,allowForAll=false]
+2019-11-07 07:02:41.103 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Begin transport.
+2019-11-07 07:02:41.103 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Retrieving object data.
+2019-11-07 07:02:41.107 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Setting uuids of object references.
+2019-11-07 07:02:41.107 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Processing reference: ProcessModelFolder.parentFolderId
+2019-11-07 07:02:41.107 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Processing reference: com.appiancorp.suiteapi.process.ProcessRoleMap@eaadb92[
+  Role[name=ADMIN_OWNER]
+  Role[name=EDITOR]
+  Role[name=EXPLICIT_NONMEMBER]
+  Role[name=VIEWER]
+  Role[name=MANAGER]
+  Role[name=INITIATOR]
+]
+2019-11-07 07:02:41.107 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Processing reference: Role[name=ADMIN_OWNER]
+2019-11-07 07:02:41.107 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Processing reference: Role[name=EDITOR]
+2019-11-07 07:02:41.108 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Processing reference: Role[name=EXPLICIT_NONMEMBER]
+2019-11-07 07:02:41.108 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Processing reference: Role[name=VIEWER]
+2019-11-07 07:02:41.108 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Processing reference: Role[name=MANAGER]
+2019-11-07 07:02:41.108 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Processing reference: Role[name=INITIATOR]
+2019-11-07 07:02:41.108 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Completing produce.
+2019-11-07 07:02:41.108 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Exporting binary resources.
+2019-11-07 07:02:41.108 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Serializing object to XML.
+2019-11-07 07:02:41.109 DEBUG processModelFolder 65 _g-0000e367-8744-8000-0b9d-014d98014d98_236 Object transported.
+2019-11-07 07:02:41.11 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Begin transport.
+2019-11-07 07:02:41.11 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Retrieving object data.
+2019-11-07 07:02:41.131 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Setting uuids of object references.
+2019-11-07 07:02:41.131 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ProcessModelHaul.folderId
+2019-11-07 07:02:41.133 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ProcessModelHaul.modelDashboardPageId
+2019-11-07 07:02:41.133 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ProcessModelHaul.processDashboardPageId
+2019-11-07 07:02:41.133 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ProcessModel.emailAttachmentFolderId
+2019-11-07 07:02:41.136 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: InternalForm.docId
+2019-11-07 07:02:41.138 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ActivityClassParameter[name=pmID,it=23,v=<null>]
+2019-11-07 07:02:41.138 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ActivityClassParameter[name=inMap,it=111,v={}]
+2019-11-07 07:02:41.138 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ActivityClassParameter[name=procInheritsPriority,it=1,v=1]
+2019-11-07 07:02:41.139 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ActivityClassParameter[name=pmUUID,it=3,v=]
+2019-11-07 07:02:41.139 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ActivityClassParameter[name=isAsynchronous,it=26,v=1]
+2019-11-07 07:02:41.139 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ActivityClassParameter[name=isTransparent,it=26,v=1]
+2019-11-07 07:02:41.139 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ActivityClassParameter[name=inheritSecurity,it=26,v=0]
+2019-11-07 07:02:41.14 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ProcessVariable[name=pv1,it=1,v=0]
+2019-11-07 07:02:41.14 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ProcessVariable[name=pv2,it=1,v=0]
+2019-11-07 07:02:41.14 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: ProcessVariable[name=sum,it=1,v=0]
+2019-11-07 07:02:41.14 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: com.appiancorp.suiteapi.process.ProcessRoleMap@59076234[
+  Role[name=ADMIN_OWNER]
+  Role[name=EDITOR]
+  Role[name=EXPLICIT_NONMEMBER]
+  Role[name=VIEWER]
+  Role[name=MANAGER]
+  Role[name=INITIATOR]
+]
+2019-11-07 07:02:41.14 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: Role[name=ADMIN_OWNER]
+2019-11-07 07:02:41.14 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: Role[name=EDITOR]
+2019-11-07 07:02:41.14 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: Role[name=EXPLICIT_NONMEMBER]
+2019-11-07 07:02:41.141 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: Role[name=VIEWER]
+2019-11-07 07:02:41.141 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: Role[name=MANAGER]
+2019-11-07 07:02:41.141 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Processing reference: Role[name=INITIATOR]
+2019-11-07 07:02:41.141 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Completing produce.
+2019-11-07 07:02:41.141 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Exporting binary resources.
+2019-11-07 07:02:41.141 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Serializing object to XML.
+2019-11-07 07:02:41.367 DEBUG processModel 1009 0002e380-940e-8000-0b9d-014d98014d98 Object transported.
+2019-11-07 07:02:41.367 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Completing produce.
+2019-11-07 07:02:41.367 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Exporting binary resources.
+2019-11-07 07:02:41.367 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Serializing object to XML.
+2019-11-07 07:02:41.369 DEBUG application 14630 _a-0000e367-8744-8000-0bd6-01ef9001ef90_96144 Object transported.
