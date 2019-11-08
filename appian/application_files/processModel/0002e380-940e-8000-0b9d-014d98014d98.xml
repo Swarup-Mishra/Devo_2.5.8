@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <processModelHaul>
-  <versionUuid>0002e380-956e-8000-0b9d-014d98014d98</versionUuid>
+  <versionUuid>0001e380-9e76-8000-0b9d-014d98014d98</versionUuid>
   <folderUuid>_g-0000e367-8744-8000-0b9d-014d98014d98_236</folderUuid>
   <roleMap>
     <role name="ADMIN_OWNER">
@@ -81,6 +81,12 @@
         <useProcessInitiatorTimeZone>true</useProcessInitiatorTimeZone>
       </meta>
       <pvs>
+        <pv name="Sub">
+          <a:value xmlns="" xsi:type="xsd:int">0</a:value>
+          <parameter>false</parameter>
+          <required>false</required>
+          <hidden>false</hidden>
+        </pv>
         <pv name="pv1">
           <a:value xmlns="" xsi:type="xsd:int">0</a:value>
           <parameter>false</parameter>
@@ -446,6 +452,7 @@
             <custom-params/>
             <output-exprs>
               <el typeFlag="0"><![CDATA[sum:sum(pv!pv1,pv!pv2)]]></el>
+              <el typeFlag="0"><![CDATA[Sub:pv!pv1-pv!pv2]]></el>
             </output-exprs>
             <requires-user-interaction>true</requires-user-interaction>
             <run-as>
@@ -458,7 +465,7 @@
           <escalations/>
           <connections>
             <connection>
-              <guiId>3</guiId>
+              <guiId>5</guiId>
               <to>1</to>
               <toObjectType>ap.gui.Node</toObjectType>
               <fromAnchor>1</fromAnchor>
@@ -539,5 +546,6 @@
   <isPublished>true</isPublished>
   <history>
     <historyInfo versionUuid="0002e380-956e-8000-0b9d-014d98014d98"/>
+    <historyInfo versionUuid="0001e380-9e76-8000-0b9d-014d98014d98"/>
   </history>
 </processModelHaul>
