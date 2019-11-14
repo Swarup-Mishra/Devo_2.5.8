@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78373</versionUuid>
+    <rule>
+        <name>test123</name>
+        <uuid>_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78362</uuid>
+        <description></description>
+        <parentUuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70914</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>{
+  #"SYSTEM_SYSRULES_sectionLayout_v1"(
+    contents: {
+      #"SYSTEM_SYSRULES_columnsLayout"(
+        columns: {
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_columnChartField"(
+                label: "Issue Type",
+                labelPosition: "ABOVE",
+                categories: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109",
+                series: {
+                  #"SYSTEM_SYSRULES_chartSeries"(label: "Chart Series", data: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_77209"())
+                },
+                stacking: "NONE",
+                showLegend: true,
+                showTooltips: true
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_75305"()
+            }
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_columnChartField"(
+                label: "Assignee",
+                labelPosition: "ABOVE",
+                categories: #"_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78226",
+                series: {
+                  #"SYSTEM_SYSRULES_chartSeries"(label: "Chart Series", data: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_75311"())
+                },
+                stacking: "NONE",
+                showLegend: true,
+                showTooltips: true
+              )
+            }
+          )
+        }
+      )
+    }
+  )
+}</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78373"/>
+    </history>
+</contentHaul>

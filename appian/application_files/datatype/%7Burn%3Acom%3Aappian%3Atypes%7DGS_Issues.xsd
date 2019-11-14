@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="urn:com:appian:types"
+  xmlns:a="http://www.appian.com/ae/types/2009"
+  xmlns:tns="urn:com:appian:types" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:import namespace="http://www.appian.com/ae/types/2009" schemaLocation="%7Bhttp%3A%2F%2Fwww.appian.com%2Fae%2Ftypes%2F2009%7DCollaborationDocument.xsd"/>
+  <xsd:complexType name="GS_Issues">
+    <xsd:annotation>
+      <xsd:appinfo source="http://www.appian.com/ae/types/2009">
+        <ns2:Metadata xmlns:ns2="http://www.appian.com/ae/types/2009">
+          <ns2:versionUuid>0000e308-35da-8000-ffe9-014d98014d98</ns2:versionUuid>
+          <ns2:history>
+            <ns2:historyInfo versionUuid="0000e308-35da-8000-ffe9-014d98014d98"/>
+          </ns2:history>
+        </ns2:Metadata>
+      </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="PKID" nillable="true" type="xsd:int">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Id @GeneratedValue</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Issue_ID" nillable="true" type="xsd:int"/>
+      <xsd:element name="Issue_Type" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=255)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Status" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=255)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Priority" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=255)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Issue_Description" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=255)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Created_Date" nillable="true" type="xsd:date"/>
+      <xsd:element name="Investigation_Details" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=1000)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="Issue_Documents" nillable="true" type="a:CollaborationDocument"/>
+      <xsd:element name="Assignee" nillable="true" type="xsd:string">
+        <xsd:annotation>
+          <xsd:appinfo source="appian.jpa">@Column(length=255)</xsd:appinfo>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

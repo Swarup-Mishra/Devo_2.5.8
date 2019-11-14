@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>d4901328-ecbf-49a9-8e80-6b2f0b93b181</versionUuid>
+  <recordType a:uuid="6d0bc14b-3863-4d39-8efd-312726cc3647" name="Issue">
+    <a:pluralName>Issues</a:pluralName>
+    <a:description>Contains issues for the application</a:description>
+    <a:urlStub>qtzjWA</a:urlStub>
+    <a:source
+      a:uuid="f16e28e5-d689-4b49-b713-f017ae00b5ff@_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70956" xsi:type="a:DataStoreEntity"/>
+    <a:listViewTemplateExpr>#"SYSTEM_SYSRULES_recordGridLayoutColumns"(
+  columns: {
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Issue ID",
+      field: "Issue_ID",
+      component: #"SYSTEM_SYSRULES_recordGrid_linkField"(
+        links: {
+          #"SYSTEM_SYSRULES_recordLink"(
+            label: rf!Issue_ID,
+            recordtype: rp!type,
+            identifier: rp!id
+          )
+        }
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Issue Type",
+      field: "Issue_Type",
+      component: #"SYSTEM_SYSRULES_recordGrid_textField"(
+        displayvalue: rf!Issue_Type
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Priority",
+      field: "Priority",
+      component: #"SYSTEM_SYSRULES_recordGrid_textField"(
+        displayValue: rf!Priority,
+        align: null
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Status",
+      field: "Status",
+      component: #"SYSTEM_SYSRULES_recordGrid_textField"(
+        displayValue: rf!Status,
+        align: null
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridLayoutColumn"(
+      label: "Assignee",
+      width: "DISTRIBUTE",
+      component: #"SYSTEM_SYSRULES_recordGrid_textField"(
+        displayvalue: rf!Assignee
+      )
+    )
+  },
+  pageSize: 50,
+  defaultSort: #"SYSTEM_SYSRULES_sortInfo"(
+    field: "Issue_Type",
+    ascending: fn!true()
+  ),
+  shadeAlternateRows: true
+)</a:listViewTemplateExpr>
+    <a:fieldCfg name="By Type">
+      <a:description/>
+      <a:sourceRef>Issue_Type</a:sourceRef>
+      <a:isSortable>false</a:isSortable>
+      <a:isSearchable>false</a:isSearchable>
+      <a:isFacet>true</a:isFacet>
+      <a:facetType>CUSTOM_BUCKETS_CLOSED</a:facetType>
+      <a:isExclusiveFacet>true</a:isExclusiveFacet>
+      <a:facetLabelExpr>"by Type"</a:facetLabelExpr>
+      <a:facetOption>
+        <a:labelExpr>#"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109"[1]</a:labelExpr>
+        <a:facetOperator>IN</a:facetOperator>
+        <a:lowerLimitExpr/>
+        <a:upperLimitExpr/>
+        <a:values>#"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109"[1]</a:values>
+      </a:facetOption>
+      <a:facetOption>
+        <a:labelExpr>#"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109"[2]</a:labelExpr>
+        <a:facetOperator>IN</a:facetOperator>
+        <a:lowerLimitExpr/>
+        <a:upperLimitExpr/>
+        <a:values>#"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109"[2]</a:values>
+      </a:facetOption>
+      <a:sortOrderIndex>0</a:sortOrderIndex>
+      <a:facetOrderIndex>0</a:facetOrderIndex>
+      <a:visibilityExpr/>
+      <a:defaultOptionExpr/>
+      <a:allowMultipleSelections>true</a:allowMultipleSelections>
+    </a:fieldCfg>
+    <a:detailViewCfg>
+      <a:nameExpr>="Summary"</a:nameExpr>
+      <a:uiExpr>#"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72458"(true,#"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72480"(rp!id))</a:uiExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:urlStub>summary</a:urlStub>
+      <a:headerExpr/>
+      <a:relatedActionCfg>7dd87fb3-23b7-44c8-b07e-2fe3acd28473</a:relatedActionCfg>
+      <a:relatedActionCfg>762bcd3d-3eec-498c-9f83-da5b5c8a4cad</a:relatedActionCfg>
+    </a:detailViewCfg>
+    <a:relatedActionCfg>
+      <a:target a:uuid="0002e309-5797-8000-ffe9-014d98014d98" xsi:type="a:ProcessModel"/>
+      <a:contextExpr>{
+  GS_IssueDetails: null, /* GS_Issues */
+  PKID: rp!id, /* Number (Integer) */
+  cancel: null /* Boolean */
+}</a:contextExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:iconId>f0e7</a:iconId>
+      <a:refId>7dd87fb3-23b7-44c8-b07e-2fe3acd28473</a:refId>
+      <a:staticTitleString>Update Issue</a:staticTitleString>
+      <a:staticDescriptionString>To Update the existing Issue</a:staticDescriptionString>
+    </a:relatedActionCfg>
+    <a:relatedActionCfg>
+      <a:target a:uuid="0002e30b-b17b-8000-ffe9-014d98014d98" xsi:type="a:ProcessModel"/>
+      <a:contextExpr>{
+  IssueCDT: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72480"(rp!id), /* GS_Issues */
+  cancel: null, /* Boolean */
+  flagreadonly: true, /* Boolean */
+}</a:contextExpr>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:iconId>f0e7</a:iconId>
+      <a:refId>762bcd3d-3eec-498c-9f83-da5b5c8a4cad</a:refId>
+      <a:staticTitleString>Delete Issue</a:staticTitleString>
+      <a:staticDescriptionString>To delete Existing records</a:staticDescriptionString>
+    </a:relatedActionCfg>
+    <a:isSystem>false</a:isSystem>
+    <a:dataSrcExpr/>
+    <a:facetsListExpr/>
+    <a:titleExpr/>
+    <a:defaultFiltersExpr/>
+    <a:layoutType>GRID</a:layoutType>
+    <a:security>16383</a:security>
+    <a:hideLatestNews>false</a:hideLatestNews>
+    <a:isExportable>true</a:isExportable>
+    <a:listViewSrcExpr/>
+    <a:recordViewSrcExpr/>
+  </recordType>
+  <roleMap/>
+  <history>
+    <historyInfo versionUuid="d4901328-ecbf-49a9-8e80-6b2f0b93b181"/>
+  </history>
+  <migrationVersion>1</migrationVersion>
+</recordTypeHaul>

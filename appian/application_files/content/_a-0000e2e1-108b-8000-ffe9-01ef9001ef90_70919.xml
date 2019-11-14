@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_72455</versionUuid>
+    <rule>
+        <name>Gs_IssueMain</name>
+        <uuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70919</uuid>
+        <description>GS issue Details</description>
+        <parentUuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70914</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "GS Issue Tracker",
+  contents: {
+    #"SYSTEM_SYSRULES_sectionLayout_v1"(
+      contents: {}
+    ),
+    #"SYSTEM_SYSRULES_sectionLayout_v1"(
+      label: "Issue Details",
+      contents: {
+        #"SYSTEM_SYSRULES_columnsLayout"(
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_integerField"(
+                  label: "Issue ID",
+                  labelPosition: "ABOVE",
+                  value: ri!GS_Issue.Issue_ID,
+                  saveInto: ri!GS_Issue.Issue_ID,
+                  refreshAfter: "UNFOCUS",
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dropdownField"(
+                  label: "Issue Type",
+                  labelPosition: "ABOVE",
+                  placeholderLabel: "--- Select a Value ---",
+                  choiceLabels: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109",
+                  choiceValues: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109",
+                  value: ri!GS_Issue.Issue_Type,
+                  saveInto: ri!GS_Issue.Issue_Type,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dateField"(
+                  label: "Created Date",
+                  labelPosition: "ABOVE",
+                  value: ri!GS_Issue.Created_Date,
+                  saveInto: ri!GS_Issue.Created_Date,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_pickerFieldUsers"(
+                  label: "Assignee",
+                  labelPosition: "ABOVE",
+                  value: ri!GS_Issue.Assignee,
+                  saveInto: ri!GS_Issue.Assignee,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dropdownField"(
+                  label: "Status",
+                  labelPosition: "ABOVE",
+                  placeholderLabel: "--- Select a Value ---",
+                  choiceLabels: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72115",
+                  choiceValues: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72115",
+                  value: ri!GS_Issue.Status,
+                  saveInto: ri!GS_Issue.Status,
+                  validations: {}
+                )
+              }
+            ),
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_paragraphField"(
+                  label: "Issue Description",
+                  labelPosition: "ABOVE",
+                  value: ri!GS_Issue.Issue_Description,
+                  saveInto: ri!GS_Issue.Issue_Description,
+                  refreshAfter: "UNFOCUS",
+                  required: true,
+                  height: "MEDIUM",
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dropdownField"(
+                  label: "Priority ",
+                  labelPosition: "ABOVE",
+                  placeholderLabel: "--- Select a Value ---",
+                  choiceLabels: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72178",
+                  choiceValues: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72178",
+                  value: ri!GS_Issue.Priority,
+                  saveInto: ri!GS_Issue.Priority,
+                  validations: {}
+                )
+                /*a!fileUploadField(*/
+                  /*label: "Issue Documents",*/
+                  /*labelPosition: "ABOVE",*/
+                  /*value: ri!GS_IssueCDT.Issue_Documents,*/
+                  /*saveInto: ri!GS_IssueCDT.Issue_Documents,*/
+                  /*validations: {}*/
+                /*)*/
+              }
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_paragraphField"(
+      label: "Investigation Details",
+      labelPosition: "ABOVE",
+      value: ri!GS_Issue.Investigation_Details,
+      saveInto: ri!GS_Issue.Investigation_Details,
+      refreshAfter: "UNFOCUS",
+      required: true,
+      height: "MEDIUM",
+      validations: {}
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Submit",
+        submit: true,
+        style: "NORMAL"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Cancel",
+        value: true,
+        saveInto: ri!cancel,
+        submit: true,
+        style: "NORMAL",
+        validate: false
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>GS_Issue</name>
+            <type>
+                <name>GS_Issues</name>
+                <namespace>urn:com:appian:types</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e304-a913-8000-ffe9-01ef9001ef90_72455"/>
+    </history>
+</contentHaul>

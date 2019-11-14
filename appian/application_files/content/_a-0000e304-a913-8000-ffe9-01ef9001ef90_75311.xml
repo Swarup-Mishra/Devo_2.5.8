@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78238</versionUuid>
+    <rule>
+        <name>GS_Report1</name>
+        <uuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_75311</uuid>
+        <description></description>
+        <parentUuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70914</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load
+(
+  local!datasubset: #"SYSTEM_SYSRULES_queryEntity_v1"(
+    entity: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72222",
+    query: #"SYSTEM_SYSRULES_query"(
+      pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+        1,-1
+      )
+    )
+  ),
+  {
+    length(index(local!datasubset.data,wherecontains(
+      #"_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78226"[1],
+      touniformstring(local!datasubset.data.Assignee)),"NA")),
+      length(index(local!datasubset.data,wherecontains(
+        #"_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78226"[2],
+        touniformstring(local!datasubset.data.Assignee)),"NA")),
+        length(index(local!datasubset.data,wherecontains(
+          #"_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78226"[3],
+          touniformstring(local!datasubset.data.Assignee)),"NA")),
+          length(index(local!datasubset.data,wherecontains(
+            #"_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78226"[4],
+            touniformstring(local!datasubset.data.Assignee)),"NA")),
+            /*length(index(local!datasubset.data,wherecontains(*/
+              /*cons!GS_ISSUE_TYPE_LIST[5],*/
+              /*touniformstring(local!datasubset.data.Assignee)),"NA"))*/
+
+  }
+)
+
+
+
+
+
+
+
+</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78238"/>
+    </history>
+</contentHaul>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_77084</versionUuid>
+    <rule>
+        <name>GS_Delete</name>
+        <uuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_72668</uuid>
+        <description>Delete Existing Record</description>
+        <parentUuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70914</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Delete Issue",
+  contents: {
+    #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72458"(true,ri!issueCDT)
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Delete",
+        
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "Cancel",
+        saveInto: ri!cancel,
+        submit: true,
+        style: "NORMAL"
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>flagreadonly</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>IssueCDT</name>
+            <type>
+                <name>GS_Issues</name>
+                <namespace>urn:com:appian:types</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e304-a913-8000-ffe9-01ef9001ef90_73537"/>
+        <historyInfo versionUuid="_a-0000e304-a913-8000-ffe9-01ef9001ef90_77084"/>
+    </history>
+</contentHaul>

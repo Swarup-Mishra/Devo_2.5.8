@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_73520</versionUuid>
+    <rule>
+        <name>GS_IssueUpdate</name>
+        <uuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_72567</uuid>
+        <description></description>
+        <parentUuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70914</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(local!GS_IssueDetails:#"SYSTEM_SYSRULES_queryEntity_v1"(
+  entity: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72222",
+  query: #"SYSTEM_SYSRULES_query"(
+    filter: #"SYSTEM_SYSRULES_queryFilter"(
+      field: "PKID",
+      operator: "=",
+      value: ri!PKID
+    ),
+    pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+      startIndex: 1,
+      batchSize: -1
+    )
+  )
+).data[1],
+#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Update Details",
+  contents: {
+    #"SYSTEM_SYSRULES_boxLayout"(
+      label: "Issue Details",
+      contents: {
+        #"SYSTEM_SYSRULES_columnsLayout"(
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Issue Id",
+                  labelPosition: "ADJACENT",
+                  value: local!GS_IssueDetails.Issue_ID,
+                  saveInto: {local!GS_IssueDetails.Issue_ID},
+                  refreshAfter: "UNFOCUS",
+                 
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dropdownField"(
+                  label: "Issue Type",
+                  labelPosition: "ADJACENT",
+                  choiceLabels: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109",
+                  choiceValues: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109",
+                  value: local!GS_IssueDetails.Issue_Type,
+                  saveInto: {local!GS_IssueDetails.Issue_Type},
+                  refreshAfter: "UNFOCUS",
+               
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dateField"(
+                  label: "Created Date",
+                  labelPosition: "ADJACENT",
+                  value: local!GS_IssueDetails.Created_Date,
+                  saveInto: {local!GS_IssueDetails.Created_Date},
+                  refreshAfter: "UNFOCUS",
+                 
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Assignee",
+                  labelPosition: "ADJACENT",
+                  value:local!GS_IssueDetails.Assignee,
+                  saveInto: {local!GS_IssueDetails.Assignee},
+                  refreshAfter: "UNFOCUS",
+                  
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dropdownField"(
+                  label: "Status",
+                  labelPosition: "ADJACENT",
+                  choiceLabels: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72115",
+                  choiceValues:  #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72115",
+                  value:local!GS_IssueDetails.Status,
+                  saveInto: {local!GS_IssueDetails.Status},
+                  refreshAfter: "UNFOCUS",
+
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_paragraphField"(
+                  label: "Investigation Details",
+                  labelPosition: "ADJACENT",
+                  value:local!GS_IssueDetails.Investigation_Details,
+                  saveInto: {local!GS_IssueDetails.Investigation_Details},
+                  refreshAfter: "UNFOCUS",
+
+                  validations: {}
+                )
+              }
+            ),
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_paragraphField"(
+                  label: "Issue Description",
+                  labelPosition: "ADJACENT",
+                  value: local!GS_IssueDetails.Issue_Description,
+                  saveInto: {local!GS_IssueDetails.Issue_Description},
+                  refreshAfter: "UNFOCUS",
+               
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dropdownField"(
+                  label: "Priority",
+                  labelPosition: "ADJACENT",
+                  choiceLabels: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72178",
+                  choiceValues: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72178",
+                  value: local!GS_IssueDetails.Priority,
+                  saveInto: {local!GS_IssueDetails.Priority},
+                  refreshAfter: "UNFOCUS",
+                 
+                  validations: {}
+                )
+              }
+            )
+          }
+        )
+      },
+      style: "ACCENT",
+      marginBelow: "STANDARD"
+    )   
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "update",
+        saveInto: {
+          a!save(ri!GS_IssueDetails,local!GS_IssueDetails)
+        },
+        submit: true,
+        style: "PRIMARY"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_ButtonWidget"(
+        label: "cancel",
+        saveInto: {
+          a!save(ri!cancel,true)
+        },
+        submit: true,
+        style: "NORMAL"
+      )
+    }
+  )
+)
+)
+</definition>
+        <namedTypedValue>
+            <name>PKID</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>GS_IssueDetails</name>
+            <type>
+                <name>GS_Issues</name>
+                <namespace>urn:com:appian:types</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e304-a913-8000-ffe9-01ef9001ef90_73520"/>
+    </history>
+</contentHaul>

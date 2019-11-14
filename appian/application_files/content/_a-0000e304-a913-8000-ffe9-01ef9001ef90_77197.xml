@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78398</versionUuid>
+    <rule>
+        <name>GS_FinalReport</name>
+        <uuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_77197</uuid>
+        <description></description>
+        <parentUuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70914</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>/*load(*/
+  /*local!datasubset:a!queryEntity(entity:cons!GS_ISSUE_ENTITY,*/
+  /*query:a!query(*/
+    /*pagingInfo: a!pagingInfo(1,-1)*/
+  /*)*/
+  /*),*/
+  {
+    #"SYSTEM_SYSRULES_billboardLayout"(
+      backgroundMedia: #"SYSTEM_SYSRULES_documentImage"(
+        document: #"_a-0000e310-a69f-8000-ffe9-01ef9001ef90_77462"
+      ),
+      backgroundColor: "#c0c0c0",
+      overlaypositionbar: "TOP",
+      overlayStyle: "",
+      overlayContents: {
+        #"SYSTEM_SYSRULES_sideBySideLayout"(
+          items: {
+            #"SYSTEM_SYSRULES_sideBySideItem"(
+              item: #"SYSTEM_SYSRULES_imageField_v1"(
+                label: "",
+                labelPosition: "ABOVE",
+                images: {
+                  #"SYSTEM_SYSRULES_documentImage"(
+                    document: #"_a-0000e310-a69f-8000-ffe9-01ef9001ef90_77468"
+                  )
+                },
+                size: "SMALL",
+                isThumbnail: false,
+                style: "",
+                align: "START"
+              )
+            ),
+            
+          },
+          spacing: "DENSE",
+          marginbelow: "NONE"
+        )
+      },
+      height: "TALL",
+      marginBelow: "NONE"
+      
+    ),
+    #"_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78362"()
+  /*a!columnChartField(*/
+    /*label: "Issue Type",*/
+    /*labelPosition: "ABOVE",*/
+    /*categories: cons!GS_ISSUE_TYPE_LIST,*/
+    /*series: {*/
+      /*a!chartSeries(label: "Chart Series", data: rule!GS_IssueFilters())*/
+    /*},*/
+    /*stacking: "NONE",*/
+    /*showLegend: true,*/
+    /*showTooltips: true*/
+  /*),*/
+  /*a!pieChartField(*/
+    /*label: "Pie Chart",*/
+    /*labelPosition: "ABOVE",*/
+    /*series: {*/
+      /*a!chartSeries(label: "MX", data: rule!GS_IssueFilters()[1]),*/
+      /*a!chartSeries(label: "MPS", data: rule!GS_IssueFilters()[2]),*/
+      /*a!chartSeries(label: "E-MAIL", data: rule!GS_IssueFilters()[3]),*/
+      /*a!chartSeries(label: "ALERTS", data: rule!GS_IssueFilters()[4]),*/
+      /*a!chartSeries(label: "SYMPHONY", data: rule!GS_IssueFilters()[5]),*/
+    /*},*/
+    /*showDataLabels: true*/
+  /*),*/
+  /*a!columnChartField(*/
+    /*label: "Assignee",*/
+    /*labelPosition: "ABOVE",*/
+    /*categories: cons!Task_Assignee,*/
+    /*series: {*/
+      /*a!chartSeries(label: "Chart Series", data: rule!GS_Report1())*/
+    /*},*/
+    /*stacking: "NONE",*/
+    /*showLegend: true,*/
+    /*showTooltips: true*/
+  /*),*/
+}
+/*)*/</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e310-a69f-8000-ffe9-01ef9001ef90_78398"/>
+    </history>
+</contentHaul>

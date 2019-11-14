@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>4c991580-7bd7-421e-8dc7-93def4040235</versionUuid>
+    <tempoReport a:uuid="808e2fe2-668c-4972-bb7a-90f6b610b60c" name="Issue">
+        <a:description>report for issue type</a:description>
+        <a:uiExpr>=#"_a-0000e304-a913-8000-ffe9-01ef9001ef90_77197"()</a:uiExpr>
+        <a:urlStub>wN1VRQ</a:urlStub>
+    </tempoReport>
+    <roleMap/>
+    <history>
+        <historyInfo versionUuid="4c991580-7bd7-421e-8dc7-93def4040235"/>
+    </history>
+</tempoReportHaul>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e310-a69f-8000-ffe9-01ef9001ef90_77490</versionUuid>
+    <rule>
+        <name>Tracker_Report1</name>
+        <uuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_75305</uuid>
+        <description></description>
+        <parentUuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70914</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>load(
+  {
+  #"SYSTEM_SYSRULES_pieChartField"(
+    label: "Pie Chart",
+    labelPosition: "ABOVE",
+    series: {
+      #"SYSTEM_SYSRULES_chartSeries"(label: "MX", data: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_77209"()[1]),
+      #"SYSTEM_SYSRULES_chartSeries"(label: "MPS", data: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_77209"()[2]),
+      #"SYSTEM_SYSRULES_chartSeries"(label: "E-MAIL", data: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_77209"()[3]),
+      #"SYSTEM_SYSRULES_chartSeries"(label: "ALERTS", data: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_77209"()[4]),
+      #"SYSTEM_SYSRULES_chartSeries"(label: "SYMPHONY", data: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_77209"()[5]),
+    },
+    showDataLabels: true
+  )
+}
+)</definition>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e310-a69f-8000-ffe9-01ef9001ef90_77490"/>
+    </history>
+</contentHaul>

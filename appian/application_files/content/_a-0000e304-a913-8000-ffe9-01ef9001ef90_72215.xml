@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_72343</versionUuid>
+    <rule>
+        <name>GS_Test</name>
+        <uuid>_a-0000e304-a913-8000-ffe9-01ef9001ef90_72215</uuid>
+        <description>Test rule</description>
+        <parentUuid>_a-0000e2e1-108b-8000-ffe9-01ef9001ef90_70914</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_writeToDataStoreEntity"(
+  dataStoreEntity: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72222",
+  valueToStore: 'type!{urn:com:appian:types}GS_IssueCDT'(
+    Issue_ID: 1001,
+    Issue_Type: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72109"[1],
+    Created_Date: today(),
+    Status: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72115"[3],
+    Priority: #"_a-0000e304-a913-8000-ffe9-01ef9001ef90_72178"[1],
+    Investigation_Details: "Hello",
+    Assignee: "Swarup",
+    ID: 1,
+    Issue_Description: "Hello world"
+  )
+)</definition>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000e304-a913-8000-ffe9-01ef9001ef90_72343"/>
+    </history>
+</contentHaul>
