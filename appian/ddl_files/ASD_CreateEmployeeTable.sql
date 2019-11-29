@@ -1,4 +1,4 @@
-/*
+/*
 Data Store: ASD_DS
 Created: 2019-11-28T07:27:19.917Z
 By: root
@@ -9,7 +9,7 @@ Database Driver: MySQL Connector Java mysql-connector-java-5.1.47 ( Revision: fe
 
 /* UPDATE DDL */
 /* DROP AND CREATE DDL */
-/* WARNING: The DDL commented out below will drop and re-create all tables.
+/*WARNING: The DDL commented out below will drop and re-create all tables.*/
     drop table if exists `asdemployee`;
 
     create table `asdemployee` (
@@ -17,5 +17,5 @@ Database Driver: MySQL Connector Java mysql-connector-java-5.1.47 ( Revision: fe
         `firstname` varchar(255),
         `lastname` varchar(255),
         primary key (`id`)
-    ) ENGINE=InnoDB;
-*/
+    ) ;
+
